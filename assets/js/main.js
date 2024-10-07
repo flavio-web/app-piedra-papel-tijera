@@ -19,7 +19,7 @@ const btnJugar = document.getElementById('startGame');
 console.log({btnJugar});
 btnJugar.addEventListener('click', function(){
 
-    const audioStarGame = './app-piedra-papel-tijera/assets/sounds/start-game.wav';
+    const audioStarGame = './assets/sounds/start-game.wav';
     playMusic( audioStarGame );
 
     defaultGame();
@@ -38,7 +38,7 @@ btnJugar.addEventListener('click', function(){
 
 const btnPiedra = document.getElementById('btnPiedra');
 btnPiedra.addEventListener('click', function(){
-    const audio = '../assets/sounds/piedra.wav';
+    const audio = './assets/sounds/piedra.wav';
     playMusic( audio );
 
     const valor = 'piedra';
@@ -47,7 +47,7 @@ btnPiedra.addEventListener('click', function(){
 
 const btnPapel = document.getElementById('btnPapel');
 btnPapel.addEventListener('click', function(){
-    const audio = '../assets/sounds/papel.wav';
+    const audio = './assets/sounds/papel.wav';
     playMusic( audio );
     const valor = 'papel';
     procesarRonda( valor );
@@ -55,7 +55,7 @@ btnPapel.addEventListener('click', function(){
 
 const btnTijera = document.getElementById('btnTijera');
 btnTijera.addEventListener('click', function(){
-    const audio = '../assets/sounds/tijera.wav';
+    const audio = './assets/sounds/tijera.wav';
     playMusic( audio );
     const valor = 'tijera';
     procesarRonda( valor );
@@ -72,7 +72,7 @@ const procesarRonda = ( valor = '' ) =>{
     setPuntajePc(  juego.totalPc );
 
     if( juego.totalJugador === 3 ){
-        const audio = '../assets/sounds/winner-game.wav';
+        const audio = './assets/sounds/winner-game.wav';
         playMusic( audio, true );
 
         Swal.fire({
@@ -99,7 +99,7 @@ const procesarRonda = ( valor = '' ) =>{
 
     }else{
         if( juego.totalPc === 3 ){
-            const audio = '../assets/sounds/loser-game.wav';
+            const audio = './assets/sounds/loser-game.wav';
             playMusic( audio, true );
             Swal.fire({
                 title: 'Loser!',
