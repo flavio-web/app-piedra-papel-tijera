@@ -19,7 +19,7 @@ const btnJugar = document.getElementById('startGame');
 console.log({btnJugar});
 btnJugar.addEventListener('click', function(){
 
-    const audioStarGame = '../assets/sounds/start-game.wav';
+    const audioStarGame = './app-piedra-papel-tijera/assets/sounds/start-game.wav';
     playMusic( audioStarGame );
 
     defaultGame();
